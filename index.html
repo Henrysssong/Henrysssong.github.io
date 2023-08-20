@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feidong Song's Portfolio</title>
+    <title>Henry's website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.JPG">
 </head>
 <body>
     <header>
@@ -14,43 +15,64 @@
     <section>
         <h2>About Me</h2>
         <img src="profile.JPG" alt="Feidong Song's Image" class = "profile">
-        <p>Feidong (Henry) Song, a dedicated student at the University of California, Berkeley, 
-            is pursuing dual majors in Computer Science and Data Science. 
-            His entrepreneurial spirit is evident from his ventures: 
-            founding GPTBang, Inc., a platform harnessing the capabilities of 
-            the ChatGPT API and recognized by the CSAC 2023 Spring accelerator program, 
-            and co-founding CoffeeTea, Inc., an innovative online marketplace for 
-            college students. As a Software Engineer Intern at WanderFlow, 
-            Henry is enhancing mobile application responsiveness and is at the 
-            forefront of developing Realcollegeranking.com, a platform set to 
-            redefine college rankings. With a keen interest in LLM and its 
-            applications, he's actively seeking research opportunities to further 
-            expand his academic horizons. Beyond his professional and academic 
-            pursuits, Henry's roots trace back to the artistic hub of Chongqing, 
-            China, where he was born into an art-loving family. His personal 
-            interests also include basketball, having played for one of Canada's top 
-            high school teams, 
-            showcasing his diverse talents and experiences.</p>
-        <p>Contact info: <a href="mailto:feidong2002@berkeley.edu">feidong2002@berkeley.edu</a></p>
+        <div id = "intro_paragraph">
+            <p>Fun fact about Feidong (Henry) Song, his first name is actually Feitong 
+            not Feidong, but when his mom brought him to get his passport when he was 6, 
+            the officer mistakenly put it as Feidong Song. His mom was angry but 
+            finally said whatever.
+            <p>
+            <p>
+            Henry’s journey began from Chongqing, China, a city famous for hotpot, 
+            then he traveled to Canada to study at Ridley college when he was 13. He 
+            is now a Computer Science and Data Science Double major student at UC 
+            Berkeley. He is entrepreneurial and so loves to code things that are 
+            useful to people. His entrepreneurial spirit is evident from his 
+            ventures: founding GPTBang, Inc., a platform harnessing the capabilities 
+            of the ChatGPT API and recognized by the CSAC 2023 Spring accelerator 
+            program, and co-founding CoffeeTea, Inc., an innovative online marketplace 
+            for college students. As Feidong's journey evolved, he recognized the 
+            transformative role of technology in shaping the future and decided to 
+            channel his energies into academics, with a keen interest in potential 
+            AI research.
+            </p>
+            <p>
+            Outside the realm of academics and business, Feidong is passionate about 
+            fitness, basketball, and the arts. He's always eager to dive into new 
+            experiences, with the singular exception of roller coasters and similar 
+            thrill rides.
+            </p></div>
+        <p>Email: <a href="mailto:feidong2002@berkeley.edu">feidong2002@berkeley.edu</a></p>
     </section>
 
     <section>
         <h2>Technical</h2>
-        <ul>
-            <li data-toggle="software-projects">
-                Software project
-                <ul class="toggle-content" id="software-projects">
-                    <li>realcollegeranking.com</li>
-                    <li>feidongsong.com</li>
-                </ul>
+            <li>
+                <a href="realcollegeranking.com">realcollegeranking.com</a> 
+                <p>30% done. Personal project using React for frontend
+                    and Node.js for backend. Axios is used to fetch data from. Frontend curently
+                    deployed on Github Pages. Backend currently developing. Learning distributed
+                    system right now and will use it to deploy the backend.
+                </p>
             </li>
-            <li data-toggle="research-projects">
-                Research project
-                <ul class="toggle-content" id="research-projects">
-                    <li>TBD</li>
-                </ul>
+            <li>
+                <a href="gptbang.com">gptbang.com</a>
+                <p>Served as technical manager, designed the architecture and the stack: Vue.js for frontend 
+                    development, Springboot for backend development.
+                </p>
             </li>
-        </ul>
+            <li>
+                WanderFlow
+                <p>Work as a Software Engineer Intern and implemented mobile Frontend
+                    using React Native and Redux. Also expected to work on the backend using Node.js.
+                </p>
+            </li>
+            <li>
+                CoffeeTea
+                <p>Worked as a full stack developer and implemented the frontend using Next.js and 
+                    the backend using a full set of backend REST API using FastAPI, Poetry, 
+                    Alembic and PostgreSQL .
+                </p>
+            </li>
     </section>
 
     <section>
@@ -88,12 +110,10 @@
 
     <section>
         <h2>Interests</h2>
-        <ul>
             <li><a href="art_page.html">Art</a></li>
             <li><a href="basketball_page.html">Basketball</a></li>
             <li><a href="social_media_page.html">Social Media</a></li>
             <li><a href="photography_page.html">Photography</a></li>
-        </ul>
     </section>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -113,6 +133,14 @@
             });
         });
     </script>
-    
 </body>
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2023 Feidong (Henry) Song. All rights reserved.</p>
+    <p>Follow me on: 
+        <a href="https://www.linkedin.com/in/feidongsong/" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/Henrysssong" target="_blank">GitHub</a>
+    </p>
+</footer>
+
 </html>

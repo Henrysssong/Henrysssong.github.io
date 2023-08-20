@@ -11,7 +11,7 @@ header {
     padding: 1em 0;
 }
 section {
-    padding: 2em;
+    padding: 1em;
     max-width: 800px;
     margin: auto;
 }
@@ -67,4 +67,30 @@ section h2 + ul li {
 button {
     display: block;
     margin: auto;
+}
+#intro_paragraph {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.5em;
+}
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #444;
+}
+
+.footer a {
+    color: #007BFF;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #0056b3;
 }
