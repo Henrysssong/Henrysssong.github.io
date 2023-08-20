@@ -8,58 +8,111 @@
 </head>
 <body>
     <header>
-        <h1>Feidong Song</h1>
-        <img src="path_to_your_image.jpg" alt="Feidong Song's Image">
+        <h1>Feidong(Henry) Song</h1>
     </header>
 
     <section>
         <h2>About Me</h2>
-        <p>[A paragraph about me]</p>
-        <p>Contact info: <a href="mailto:your_email@example.com">email</a></p>
+        <img src="profile.JPG" alt="Feidong Song's Image" class = "profile">
+        <p>Feidong (Henry) Song, a dedicated student at the University of California, Berkeley, 
+            is pursuing dual majors in Computer Science and Data Science. 
+            His entrepreneurial spirit is evident from his ventures: 
+            founding GPTBang, Inc., a platform harnessing the capabilities of 
+            the ChatGPT API and recognized by the CSAC 2023 Spring accelerator program, 
+            and co-founding CoffeeTea, Inc., an innovative online marketplace for 
+            college students. As a Software Engineer Intern at WanderFlow, 
+            Henry is enhancing mobile application responsiveness and is at the 
+            forefront of developing Realcollegeranking.com, a platform set to 
+            redefine college rankings. With a keen interest in LLM and its 
+            applications, he's actively seeking research opportunities to further 
+            expand his academic horizons. Beyond his professional and academic 
+            pursuits, Henry's roots trace back to the artistic hub of Chongqing, 
+            China, where he was born into an art-loving family. His personal 
+            interests also include basketball, having played for one of Canada's top 
+            high school teams, 
+            showcasing his diverse talents and experiences.</p>
+        <p>Contact info: <a href="mailto:feidong2002@berkeley.edu">feidong2002@berkeley.edu</a></p>
     </section>
 
     <section>
         <h2>Technical</h2>
         <ul>
-            <li>Software project</li>
-            <li>Research project</li>
+            <li data-toggle="software-projects">
+                Software project
+                <ul class="toggle-content" id="software-projects">
+                    <li>realcollegeranking.com</li>
+                    <li>feidongsong.com</li>
+                </ul>
+            </li>
+            <li data-toggle="research-projects">
+                Research project
+                <ul class="toggle-content" id="research-projects">
+                    <li>TBD</li>
+                </ul>
+            </li>
         </ul>
     </section>
 
     <section>
         <h2>Business</h2>
         <ul>
+            <div class = "image-text-wrapper"> 
             <li>
-                ACE@Berkeley
-                <p>[A section of text]</p>
-                <img src="path_to_image_for_ACE@Berkeley.jpg" alt="ACE@Berkeley Image">
+                <img src="ACE.jpg" alt="ACE@Berkeley Image" class="left-float-image">
+                <h3><a href="http://ace.berkeley.edu">ACE@Berkeley</a></h3>
+                <p>Henry is the Co-President of Berkeley's prestigious student club ACE@Berkeley (Association of Chinese Entrepreneurs at Berkeley).</p>
             </li>
             <li>
-                CoffeeTea, inc.
-                <p>[A section of text]</p>
-                <img src="path_to_image_for_CoffeeTea.jpg" alt="CoffeeTea, inc. Image">
+                <img src="CoffeeTea.jpg" alt="CoffeeTea, inc. Image" class = "left-float-image">
+                <h3>CoffeeTea, inc.</h3>
+                <p>At CoffeeTea, Inc., Henry co-founded and played a pivotal role in creating an innovative 
+                    online marketplace designed to bridge the gap between college students and applicants,
+                    ultimately amassing a community of over 1,000 members.</p>
             </li>
             <li>
-                GPTBang
-                <p>[A section of text]</p>
-                <img src="path_to_image_for_GPTBang.jpg" alt="GPTBang Image">
+                <img src="gptbang.png"  alt="GPTBang Image" class = "left-float-image">
+                <h3><a href="http://gptbang.com">GPTBang</a></h3>
+                <p>As the founder and technical product manager of GPTBang, Inc., Henry showcased 
+                    his entrepreneurial acumen by developing a platform that leverages the diverse 
+                    applications of the ChatGPT API. His efforts led GPTBang to be recognized and 
+                    accepted into the selective CSAC 2023 Spring accelerator program.</p>
             </li>
             <li>
-                MiraclePlus
-                <p>[A section of text]</p>
-                <img src="path_to_image_for_MiraclePlus.jpg" alt="MiraclePlus Image">
+                <img src="miracleplus_logo.png" alt="MiraclePlus Image" class="left-float-image">
+                <h3><a href="https://www.miracleplus.com/">MiraclePlus</a></h3>
+                <p>Worked at MiraclePlus (Ex YC China) as an investment analyst intern for three months. </p>
             </li>
+        </div> 
         </ul>
     </section>
 
     <section>
         <h2>Interests</h2>
         <ul>
-            <li><a href="link_to_art_page.html">Art</a></li>
-            <li><a href="link_to_basketball_page.html">Basketball</a></li>
-            <li><a href="link_to_social_media_page.html">Social Media</a></li>
-            <li><a href="link_to_photography_page.html">Photography</a></li>
+            <li><a href="art_page.html">Art</a></li>
+            <li><a href="basketball_page.html">Basketball</a></li>
+            <li><a href="social_media_page.html">Social Media</a></li>
+            <li><a href="photography_page.html">Photography</a></li>
         </ul>
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleItems = document.querySelectorAll('[data-toggle]');
+            
+            toggleItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-toggle');
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement.style.display === 'none') {
+                        targetElement.style.display = 'block';
+                    } else {
+                        targetElement.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>

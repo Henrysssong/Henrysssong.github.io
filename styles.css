@@ -37,3 +37,34 @@ img {
     max-width: 100%;
     height: auto;
 }
+.profile {
+    width: 150px;
+    height: auto;
+}
+.left-float-image {
+    float: left;
+    margin-right: 20px; /* Adds some space between the image and the text */
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.image-text-wrapper::after {
+    content: "";
+    display: table;
+    clear: both; /* Clears the float, so elements below this container don't wrap around the image */
+}
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+section h2 + ul li {
+    margin-top: 5em;
+}
+.toggle-content {
+    display: none;
+}
+button {
+    display: block;
+    margin: auto;
+}
