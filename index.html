@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icon.JPG">
 </head>
-<body>
+<body>   
     <header>
-        <h1>Feidong(Henry) Song</h1>
+        <div class="header-content">
+            <h1>Feidong(Henry) Song</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="basketball_page.html">Projects</a></li>
+                    <li><a href="social_media_page.html">Skills</a></li>
+                    <li><a href="photography_page.html">Non-tech</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
+     
     <section>
         <h2>About Me</h2>
         <img src="profile.JPG" alt="Feidong Song's Image" class = "profile">
@@ -75,7 +86,7 @@
             </li>
     </section>
 
-    <section>
+    <section id = "business">
         <h2>Business</h2>
         <ul>
             <div class = "image-text-wrapper"> 
@@ -115,24 +126,6 @@
             <li><a href="social_media_page.html">Social Media</a></li>
             <li><a href="photography_page.html">Photography</a></li>
     </section>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleItems = document.querySelectorAll('[data-toggle]');
-            
-            toggleItems.forEach(function(item) {
-                item.addEventListener('click', function() {
-                    const targetId = this.getAttribute('data-toggle');
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement.style.display === 'none') {
-                        targetElement.style.display = 'block';
-                    } else {
-                        targetElement.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 <!-- Footer -->
 <footer class="footer">
