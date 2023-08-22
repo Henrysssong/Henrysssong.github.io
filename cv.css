@@ -101,6 +101,41 @@ section li {
     padding: 2px;
 }
 
+.project-item {
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+}
+
+.project-item h3 {
+    font-size: 2em; /* Adjust this value to make the text bigger or smaller */
+    font-weight: bold;
+    margin-bottom: 0.7em;
+}
+.project-item p {
+    font-size: 1em; /* Adjust this value to make the text bigger or smaller */
+    line-height: 1.5em;
+}
+
+.project-images {
+    display: flex;
+    gap: 15px; /* Spacing between images */
+    margin-bottom: 15px;
+}
+
+.project-image {
+    height: 200px; /* Width of images accounting for gap */
+    transition: transform 0.3s ease; /* Smoothens the hover effect */
+}
+
+.project-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
 /* === Footer Styles === */
 .footer {
     background-color: #000;
