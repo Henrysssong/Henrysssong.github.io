@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feidong (Henry) Song's CV</title>
+    <link rel="stylesheet" href="../cv.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Feidong(Henry) Song</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../skills.html">Skills</a></li>
+                    <li><a href="../insights.html">Insights</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <section>
+            <h2>Summary</h2>
+            <p>A Tsinghua group (mostly) designed a benchmark system to test 25 LLMs ability to perform reasoning and decision making under 8 distinct environments: Operation Systems, Database, Knowledge graph, Digital card game, Lateral thinking puzzles, House-holding tasks, Web shopping tasks, Web browsing tasks.</p>
+            <p>They had also released the datasets, environments, and an integrated evaluation package for AgentBench.</p>
+        </section>
+    
+        <section>
+            <h2>Preliminary</h2>
+            <ol>
+                <li>Interactive Evaluation of LLM-as-Agent. It could be regarded as a Partial Observable Markov Decision Process (S, A, T, R, U, O). It is an extension of MDP. We use it to represent, state, action, transition, reward assigned, Task instruction space and Observable states.</li>
+                <li>Action Validity. To test an LLM, we have to make sure that it is performing our tasks. While the AgentBench can more accurately evaluate LLMs on performing more complicated real-world problems, it also increased the A(Action space) meaning there are more possibilities of some dumb actions. LLMs can be too insufficiently-aligned to not follow instructions or being over-aligned to refuse to follow instructions.</li>
+                <li>Chain-of-Thought and other Reasoning Strategies.</li>
+            </ol>
+        </section>
+    
+        <section>
+            <h2>The Problem</h2>
+            <p>NLP or let’s say LLM advances, their abilities as agents invoke many imaginations. Yet when something is developing, there needs to be some sort of matrix to see which how good something is. But the previous ones (text-based games most often) had limitations that they are in a closed single direction space trying to figure the model’s ability to have common sense. The paper did not say it directly but I think LLMs right now had obtained common sense a long time ago. Therefore, many people attempt to build multi-model to perform more complicated real-life tasks not limited to the simple ability to have a conversation.</p>
+        </section>
+    
+        <section>
+            <h2>Approach</h2>
+            <p>The team invented 5 environments and combined with 3 recompiled environments to test these LLMs. They believe that their test cases can test both LLMs and LLM-Agents. Their approach to the packages they provide can be described as “API & Docker” which means just like you put things in a container using a Docker, it can be used in whatever the environment you are in and following clear instructions like in an API document.</p>
+            <p>The use Docker to text in the OS environment.</p>
+            <p>They acknowledged the importance of LLM’s application in Database, and also considered about protecting real data so used gpt-3.5-turbo to do some data augmentation.</p>
+            <p>For LTP lateral thinking problems, they basically build a set of puzzles. For example:</p>
+            <blockquote>A man walked into a restaurant, ordered a bowl of turtle soup, and after finishing it, he committed suicide. Why did he do that?</blockquote>
+            <p>During the process, there is a host who knows the answer, and the LLM’s will try to guess. The host can only say Yes, No or Irrelevant. But I did see something a bit abnormal that if the LLM is going towards a completely wrong direction, the host will provide some hints. Yet how do they ensure every hint carries the same weight? This might be a little problem.</p>
+            <p>House holding environment involves a lot of common sense, and so it had been well-established for language agent evaluations. AgentBench then used the classical ALFWorld benchmark.</p>
+            <p>They tested Web shopping ability of LLMs through Webshop, a simulated online shopping environment. In this system, about a million products were scraped from amazon for this. Since many items would fulfill the same requirement, they used a reward calculating model:</p>
+            <blockquote>Reward = (|Uatt ∩ Yatt| + |Uopt ∩ Yopt| + I[yprice ≤ uprice]) / (|Uatt| + |Uopt| + 1) · rtype where rtype = 0, if TextMatch = 0 0.1, if TextMatch < 0.1 0.5, if TextMatch ≤ 0.2 and query not match and category not match 1, otherwise</blockquote>
+            <p>For web browsing, they used Mind2Web, a recently released benchmark assessing LLM’s ability to browse through the web from user’s high-level instructions. When they are testing, they used high-level commands like “Get the highest rated SAP S/4 HANA course rated 4, and up with a duration between 3 to 6 hours for an intermediate, and add this to your cart and checkout.” instead of a step-by-step order.</p>
+        </section>
+    
+        <section>
+            <h2>Discovery</h2>
+            <p>Open-sourced LLMs are much worse than some top-tier API-based LLMs, especially on some of the more challenging tasks.</p>
+        </section>
+    
+        <section>
+            <h2>Thoughts</h2>
+            <ol>
+                <li>Wow, There is indeed a lot of Math involved in AI. I feel that when I see Partial Observable Markov Decision Process(S, A, T, R, U, O) here.</li>
+                <li>It is certainly an impressive amount of work to do. In the OS testing only, they had a group of 9 selecting and annotating from 6000 StackOverflow problems and annotating for which each problem will take 2 hours to annotate (I would guess for one person?). I am just thinking: Maybe that’s what I’ll be doing when I get into a research group.</li>
+                <li>It gets kinda confusing when this paper suddenly introduces some mathematical concepts in, for example when they are checking the OS’s tests, They wrote:</li>
+                <blockquote>Checking. For each problem, there is a checking pipeline containing a list of scripts f1, f2, · · · , fn, where fk denotes the k-th script piece in the pipeline. For fk, the answer of the model, o0, and the output of ft(t < k), ot, will be fed as input arguments into fk, i.e., ok = fk(o0, o1, · · · , ok−1). The result is correct if and only if all the scripts exit with code 0.</blockquote>
+                <li>Code 0 was kinda not making sense, so I guess again: math is important.</li>
+                <li>The team used gpt-4 and gpt-3.5-turbo to help with the testing process to test themselves. Quite funny. Is there bias tho, like if they can generate the problem, they are more likely to have an idea about the solution right? In a common sense, it doesn’t matter, but I guess this could be a little flaw to the experiment even though it could be really minor?</li>
+                <li>I also notice that they used an extensive amount of gpt-3.5-turbo in this experiment, is it because they reached the limit of gpt-4 daily limit?</li>
+            </ol>
+        </section>
+</body>
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2023 Feidong (Henry) Song. All rights reserved.</p>
+    <p>Follow me on: 
+        <a href="https://www.linkedin.com/in/feidongsong/" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/Henrysssong" target="_blank">GitHub</a>
+    </p>
+</footer>
+
+</html>
