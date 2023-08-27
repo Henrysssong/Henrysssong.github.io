@@ -147,3 +147,70 @@ section li {
     width: 100%;
     border-top: 2px solid #444;
 }
+/* === Insights Block Styles === */
+.insight-block {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.insight-block:hover {
+    transform: scale(1.02);
+}
+
+.insight-block h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.date-posted {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 15px;
+}
+
+.resource-link {
+    color: #007BFF;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.keywords {
+    margin-top: 10px;
+}
+
+.tag {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.book {
+    background-color: #FFD700;
+    color: #000;
+}
+
+.academic-paper {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.movie {
+    background-color: #FF5733;
+    color: #fff;
+}
+
+.speech-conversation {
+    background-color: #007BFF;
+    color: #fff;
+}
