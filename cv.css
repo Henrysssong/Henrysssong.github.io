@@ -1,40 +1,3 @@
-/* === Reset & General Styles === */
-body {
-    padding-top: 100px;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-}
-
-a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-h3 {
-    font-size: 1em;
-    font-weight: bold;
-    margin-bottom: 0.5em;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    margin-bottom: 1em;
-}
-
 /* === Header Styles === */
 header {
     background-color: #000;
@@ -79,60 +42,6 @@ nav ul {
 
 nav ul li {
     display: inline;
-}
-
-/* === Section Styles === */
-section {
-    max-width: 800px;
-    padding: 0em;
-    margin: auto;
-}
-
-h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-}
-section div {
-    margin-bottom: 3em;
-}
-
-section li {
-    max-width: 800px;
-    padding: 2px;
-}
-
-.project-item {
-    margin-bottom: 50px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-
-}
-
-.project-item h3 {
-    font-size: 2em; /* Adjust this value to make the text bigger or smaller */
-    font-weight: bold;
-    margin-bottom: 0.7em;
-}
-.project-item p {
-    font-size: 1em; /* Adjust this value to make the text bigger or smaller */
-    line-height: 1.5em;
-}
-
-.project-images {
-    display: flex;
-    gap: 15px; /* Spacing between images */
-    margin-bottom: 15px;
-}
-
-.project-image {
-    height: 200px; /* Width of images accounting for gap */
-    transition: transform 0.3s ease; /* Smoothens the hover effect */
-}
-
-.project-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 
@@ -214,3 +123,98 @@ section li {
     background-color: #007BFF;
     color: #fff;
 }
+/* === Reset & General Styles === */
+body {
+    padding-top: 120px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+
+
+/* === Section Styles === */
+section {
+    max-width: 800px;
+    padding: 2em;
+    margin: 2em auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 10px;
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+section div {
+    margin-bottom: 2em;
+}
+
+section li {
+    padding: 2px;
+}
+
+.job-description {
+    border-top: 1px solid #e1e1e1;
+    padding-top: 1em;
+}
+
+.job-description:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+
+/* === Additional Professional Styles === */
+strong {
+    font-weight: 600;
+}
+
+p, li {
+    font-size: 1em;
+    color: #555;
+}
+
+section a {
+    border-bottom: 1px dotted #007BFF;
+}
+
+section a:hover {
+    border-bottom-style: solid;
+}
+
