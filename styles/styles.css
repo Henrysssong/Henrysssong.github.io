@@ -7,7 +7,6 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: #007BFF;
 }
 
@@ -36,18 +35,18 @@ li {
 }
 
 /* === Header Styles === */
-/* === Header Styles === */
 header {
     background-color: #000;
     color: #fff;
     padding: 1em 0;
     text-align: center;
-    position: fixed;       /* Keeps the header fixed on the top */
-    width: 100%;           /* Ensures the header stretches across the whole screen */
-    top: 0;                /* Pins the header to the top */
-    left: 0;               /* Pins the header to the left */
-    z-index: 1000;         /* Ensures the header is on top of other content */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
+
 header h1 {
     margin: 0;
     font-size: 1.5em;
@@ -55,15 +54,15 @@ header h1 {
     margin-left: 40px;
 }
 
-header a { /* Add specificity to make sure only header links get this style */
+header a {
     color: white;
-    text-decoration: none; /* Removes the underline from hyperlinks */
+    text-decoration: none;
     margin-right: 40px;
 }
 
-header a:hover { /* Again, added specificity for header links */
-    color: #ff4343; /* Slightly darker white for hover effect */
-    text-decoration: underline; /* Optional: adds underline when hovering over the link */
+header a:hover {
+    color: #ff4343;
+    text-decoration: underline;
 }
 
 .header-content {
@@ -89,11 +88,15 @@ nav ul li {
     width: 24px;
     height: 24px;
 }
-/* ===Business Part Styles=== */
-#business li{
+
+/* === Business Part Styles === */
+#business li {
     max-width: 800px;
     padding: 1em;
     margin: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 /* === Section Styles === */
@@ -101,6 +104,10 @@ section {
     max-width: 800px;
     padding: 1em;
     margin: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -117,6 +124,7 @@ h2 {
 /* === Image Styles === */
 .profile {
     width: 150px;
+    display: block;
 }
 
 .left-float-image {
